@@ -13,7 +13,7 @@ The first element in each sub-array should contain a string with the name of the
 There should be at least 5 sub-arrays in the list.
 */
 
-    var myList = [["bread", 4], ["eggs", 5], ["cheese", 3], ["salsa", 1], ["arugala", 1]];
+    // var myList = [["bread", 4], ["eggs", 5], ["cheese", 3], ["salsa", 1], ["arugala", 1]];
 
 
 
@@ -41,18 +41,18 @@ Note: The console will still have 'ReferenceError: myVar is not defined', but th
      */
 
 
-
-    function myLocalScope() {
-
-        // Only change code below this line
-
-        console.log('inside myLocalScope', myVar);
-    }
-    myLocalScope();
+    //
+    // function myLocalScope() {
+    //
+    //     // Only change code below this line
+    //
+    //     console.log('inside myLocalScope', myVar);
+    // }
+    // myLocalScope();
 
 // Run and check the console
 // myVar is not defined outside of myLocalScope
-    console.log('outside myLocalScope', myVar);
+//     console.log('outside myLocalScope', myVar);
 
 
 
@@ -80,37 +80,37 @@ Do NOT include quotes (single or double) in the output.
 
  */
 
-    var count = 0;
-
-    function cc(card) {
-        // Only change code below this line
-        switch (card) {
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-                count++;
-                break;
-            case 10:
-            case "J":
-            case "Q":
-            case "K":
-            case "A":
-                count--;
-                break;
-        }
-        if (count > 0) {
-            return count + " Bet";
-        } else {
-            return count + " Hold";
-        }
-
-        return "Change Me";
-        // Only change code above this line
-    }
-
-    cc(2); cc(3); cc(7); cc('K'); cc('A');
+    // var count = 0;
+    //
+    // function cc(card) {
+    //     // Only change code below this line
+    //     switch (card) {
+    //         case 2:
+    //         case 3:
+    //         case 4:
+    //         case 5:
+    //         case 6:
+    //             count++;
+    //             break;
+    //         case 10:
+    //         case "J":
+    //         case "Q":
+    //         case "K":
+    //         case "A":
+    //             count--;
+    //             break;
+    //     }
+    //     if (count > 0) {
+    //         return count + " Bet";
+    //     } else {
+    //         return count + " Hold";
+    //     }
+    //
+    //     return "Change Me";
+    //     // Only change code above this line
+    // }
+    //
+    // cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 
 
@@ -129,16 +129,16 @@ Do NOT include quotes (single or double) in the output.
     //
     // Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
 
-
-    function checkObj(obj, checkProp) {
-        // Only change code below this line
-        if(obj.hasOwnProperty(checkProp)) {
-            return obj[checkProp];
-        } else {
-            return "Not Found";
-        }
-        // Only change code above this line
-    }
+    //
+    // function checkObj(obj, checkProp) {
+    //     // Only change code below this line
+    //     if(obj.hasOwnProperty(checkProp)) {
+    //         return obj[checkProp];
+    //     } else {
+    //         return "Not Found";
+    //     }
+    //     // Only change code above this line
+    // }
 
 
     /*
@@ -181,20 +181,358 @@ Do NOT include quotes (single or double) in the output.
         Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
 */
 
-    var myMusic = [
+    // var myMusic = [
+    //     {
+    //         "artist": "Billy Joel",
+    //         "title": "Piano Man",
+    //         "release_year": 1973,
+    //         "formats": [
+    //             "CD",
+    //             "8T",
+    //             "LP"
+    //         ],
+    //         "gold": true
+    //     }
+    //     // Add a record here
+    // ];
+
+
+/*
+
+
+The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+
+Here is a nested object:
+
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": {
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+ourStorage.cabinet["top drawer"].folder2;  // "secrets"
+ourStorage.desk.drawer; // "stapler"
+
+Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
+
+ */
+
+// // Setup
+//     var myStorage = {
+//         "car": {
+//             "inside": {
+//                 "glove box": "maps",
+//                 "passenger seat": "crumbs"
+//             },
+//             "outside": {
+//                 "trunk": "jack"
+//             }
+//         }
+//     };
+//
+//     var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
+
+
+/*
+
+
+As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
+
+Here is an example of how to access a nested array:
+
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+ourPets[0].names[1]; // "Fluffy"
+ourPets[1].names[0]; // "Spot"
+
+Retrieve the second tree from the variable myPlants using object dot and array bracket notation.
+
+ */
+
+// Setup
+//     var myPlants = [
+//         {
+//             type: "flowers",
+//             list: [
+//                 "rose",
+//                 "tulip",
+//                 "dandelion"
+//             ]
+//         },
+//         {
+//             type: "trees",
+//             list: [
+//                 "fir",
+//                 "pine",
+//                 "birch"
+//             ]
+//         }
+//     ];
+//
+// // Only change code below this line
+//
+//     var secondTree = myPlants[1].list[1]; // Change this line
+
+/*
+
+
+You are given a JSON object representing a part of your musical album collection. Each album has a unique id number as its key and several other properties. Not all albums have complete information.
+
+You start with an updateRecords function that takes an object like collection, an id, a prop (like artist or tracks), and a value. Complete the function using the rules below to modify the object passed to the function.
+
+    Your function must always return the entire object.
+    If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+    If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+    If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+    If value is an empty string, delete the given prop property from the album.
+
+Note: A copy of the collection object is used for the tests.
+
+ */
+
+// Setup
+//     var collection = {
+//         2548: {
+//             albumTitle: 'Slippery When Wet',
+//             artist: 'Bon Jovi',
+//             tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//         },
+//         2468: {
+//             albumTitle: '1999',
+//             artist: 'Prince',
+//             tracks: ['1999', 'Little Red Corvette']
+//         },
+//         1245: {
+//             artist: 'Robert Palmer',
+//             tracks: []
+//         },
+//         5439: {
+//             albumTitle: 'ABBA Gold'
+//         }
+//     };
+
+// Only change code below this line
+//     function updateRecords(object, id, prop, value) {
+//         //     if (prop !== 'tracks' && value !== "") {
+//         //         object[id][prop] = value;
+//         //     } else if (prop === "tracks" && !object[id].hasOwnProperty("tracks")) {
+//         //         object[id][prop] = [value];
+//         //     } else if (prop === "tracks" && value !== "") {
+//         //         object[id][prop].push(value);
+//         //     } else if (value === "") {
+//         //         delete object[id][prop];
+//         //     }
+//         //     return object;
+//         // }
+//
+//         // Or this (explanation is below!)
+//
+//         if (value === '') delete object[id][prop];
+//         else if (prop === 'tracks') {
+//             object[id][prop] = object[id][prop] || []; // this is called shortcircuit evaluation, see below for explanation
+//             object[id][prop].push(value);
+//         } else {
+//             object[id][prop] = value;
+//         }
+//         return object;
+//     }
+//
+//     updateRecords(collection, 5439, 'artist', 'ABBA');
+
+    // Code Explanation
+    //
+    // First checks if value is a blank string. If so, then the key (prop) is removed from the object.
+    //     If that first check doesn’t pass, it next checks if prop is equal to tracks. The tracks array is initialized if it does not exist, and then value is pushed into the tracks array. (This step uses shortcircuit evaluation)
+    // If both these checks fail (meaning value is not an empty string and prop is not tracks), then either a new key (prop) and value (value) are added to the object, or an existing key is updated if the prop already exists.
+
+/*
+
+
+If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
+
+var arr = [
+  [1,2], [3,4], [5,6]
+];
+for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+
+This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array.
+
+Modify function multiplyAll so that it returns the product of all the numbers in the sub-arrays of arr.
+
+ */
+
+    //
+    // function multiplyAll(arr) {
+    //     var product = 1;
+    //     // Only change code below this line
+    //     for (var i = 0; i < arr.length; i++) {
+    //         for (var j = 0; j < arr[i].length; j++) {
+    //             product = product * arr[i][j];
+    //         }
+    //     }
+    //     // Only change code above this line
+    //     return product;
+    // }
+    //
+    // multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+/*
+
+
+Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first n elements of an array to create the product of those elements. Using a for loop, you could do this:
+
+  function multiply(arr, n) {
+    var product = 1;
+    for (var i = 0; i < n; i++) {
+        product *= arr[i];
+    }
+    return product;
+  }
+
+However, notice that multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. That means you can rewrite multiply in terms of itself and never need to use a loop.
+
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+
+The recursive version of multiply breaks down like this. In the base case, where n <= 0, it returns 1. For larger values of n, it calls itself, but with n - 1. That function call is evaluated in the same way, calling multiply again until n <= 0. At this point, all the functions can return and the original multiply returns the answer.
+
+Note: Recursive functions must have a base case when they return without calling the function again (in this example, when n <= 0), otherwise they can never finish executing.
+
+Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+
+ */
+
+
+    // function sum(arr, n) {
+    //     // Only change code below this line
+    //     if (n <= 0) {
+    //         return 0;
+    //     } else {
+    //         return sum(arr, n - 1) + arr[n - 1];
+    //     }
+    //     // Only change code above this line
+    // }
+
+/*
+
+
+We have an array of objects representing different people in our contacts lists.
+
+A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+
+The function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return "No such contact".
+
+If prop does not correspond to any valid properties of a contact found to match name then return "No such property".
+
+ */
+
+
+    // Setup
+    var contacts = [
         {
-            "artist": "Billy Joel",
-            "title": "Piano Man",
-            "release_year": 1973,
-            "formats": [
-                "CD",
-                "8T",
-                "LP"
-            ],
-            "gold": true
+            "firstName": "Akira",
+            "lastName": "Laine",
+            "number": "0543236543",
+            "likes": ["Pizza", "Coding", "Brownie Points"]
+        },
+        {
+            "firstName": "Harry",
+            "lastName": "Potter",
+            "number": "0994372684",
+            "likes": ["Hogwarts", "Magic", "Hagrid"]
+        },
+        {
+            "firstName": "Sherlock",
+            "lastName": "Holmes",
+            "number": "0487345643",
+            "likes": ["Intriguing Cases", "Violin"]
+        },
+        {
+            "firstName": "Kristian",
+            "lastName": "Vos",
+            "number": "unknown",
+            "likes": ["JavaScript", "Gaming", "Foxes"]
         }
-        // Add a record here
     ];
+
+
+    function lookUpProfile(name, prop){
+// Only change code below this line
+        for (var x = 0; x < contacts.length; x++) {
+            if (contacts[x].firstName === name) {
+                if (contacts[x].hasOwnProperty(prop)) {
+                    return contacts[x][prop];
+                } else {
+                    return "No such property";
+                }
+            }
+        }
+        return "No such contact";
+
+// Only change code above this line
+    }
+
+    // Code Explanation ^^
+    //
+    // The for loop runs, starting at the first object in the contacts list.
+    //     If the firstName parameter passed into the function matches the value of the "firstName" key in the first object, the if statement passes.
+    //     Then, we use .hasOwnProperty() method (checks if there’s a given property and returns a boolean) with prop as an argument. If it’s true, the value of prop is returned.
+    //     If the second if statement fails, No such property is returned.
+    //     If the first if statement fails, the for loop continues on to the next object in the contacts list.
+    //     If the firstName parameter isn’t matched by the final contacts object, the for loop exits and No such contact is returned.
+
+    // function lookUpProfile(name, prop) {
+    //     for (var i = 0; i < contacts.length; i++) {
+    //         if (contacts[i].firstName === name) {
+    //             if (prop in contacts[i]) {
+    //                 return contacts[i][prop];
+    //             } else return "No such property";
+    //         }
+    //     }
+    //     return "No such contact";
+    // }
+    //
+    // Code Explanation
+    //
+    // This works as the last example but uses the in operator to look for prop instead of the hasOwnProperty() method.
+    //
+    //
+    // lookUpProfile("Akira", "likes");
 
 
 
